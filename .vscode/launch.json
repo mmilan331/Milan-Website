@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-Application<MilanWebsite>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "mmilan.MilanWebsite.Application",
+      "projectName": "MilanWebsite",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
