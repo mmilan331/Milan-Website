@@ -12,31 +12,31 @@ import lombok.Setter;
 @Table
 public class Account {
     
-//accountID
+//AccountID
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter
     @Setter
     private Long accountID;
 
-//username
+//Username
     @Getter
     @Setter
     private String username;
 
 //FOR SIMPLICITY, I AM STORING THIS AS A STRING
 //  - Look into encryption
-//password
+//Password
     @Getter
     @Setter
     private String password;
 
-//email
+//Email
     @Getter
     @Setter
     private String email;
 
-//phone number
+//Phone number
     @Getter
     @Setter
     private String phone;
