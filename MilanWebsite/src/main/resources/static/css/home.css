@@ -17,7 +17,7 @@ hr {
   color: white;
 }
 
-#time, #city {
+#time, #city, #weather {
   display: flex;
   font-size: 20pt;
   justify-content: center;
@@ -44,4 +44,5 @@ hr {
 
 #body2 {
   flex-grow: 1;
+  font-size: 15pt;
 }

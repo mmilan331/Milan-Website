@@ -21,6 +21,7 @@
           <hr>
           <p id="city">Chicago</p>
           <p id="currentTemp"></p>
+          <br>
           <p id="weather"></p>
         </div>
         <hr>
@@ -28,10 +29,10 @@
         <div th:if="${session.accountID == null}">
           <div id="login">
             <a th:href="@{/login}" style="padding-right: 20px;">
-              <button>Login</button>
+              <button style="font-size: 20pt">Login</button>
             </a>
             <a th:href="@{/signup}">
-              <button>Sign Up</button>
+              <button style="font-size: 20pt">Sign Up</button>
             </a>
           </div>
         </div>

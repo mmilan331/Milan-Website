@@ -12,7 +12,7 @@ import mmilan.MilanWebsite.models.Account;
 import mmilan.MilanWebsite.repository.AccountDatabase;
 
 @Controller
-public class LoginFormController {
+public class AccountFormController {
 
   @Autowired
   private AccountDatabase accountDB;
@@ -43,8 +43,10 @@ public class LoginFormController {
     return "signup";
   }
   
-  @PostMapping("/login")
-  public String signup(){
+  @PostMapping("/signupAttempt")
+  public String signup(@RequestParam String username, @RequestParam String password, @RequestParam String email, @RequestParam String phone){
+    Account newAcc = new Account(username, password, email, phone);
+    accountDB.save(newAcc);
     return "redirect:/login";
   }
 

@@ -20,7 +20,7 @@ public class Loader implements CommandLineRunner{
 
   private void localSeedData(){
     if (accountDB.count() == 0){
-      Account adminAcc = new Account("admin", "admin", "test@admin.com", "123-456-7890");
+      Account adminAcc = new Account("admin", "admin", "test@admin.com", "1234567890");
       accountDB.save(adminAcc);
     }
   }
