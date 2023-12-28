@@ -1,6 +1,6 @@
-body div {
+#body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 hr {
@@ -33,4 +33,15 @@ hr {
 
 #weather {
   padding-left: 10px;
+}
+
+#login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#body2 {
+  flex-grow: 1;
 }

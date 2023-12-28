@@ -31,12 +31,24 @@ public class Account {
     @Setter
     private String password;
 
+//email
+    @Getter
+    @Setter
+    private String email;
+
+//phone number
+    @Getter
+    @Setter
+    private String phone;
+
 //Public Constructor
     public Account(){}
 
 //Parameterized Constructor
-    public Account(String username, String password){
+    public Account(String username, String password, String email, String phone){
         this.username = username;
         this.password = password;
+        this.email = email;
+        this.phone = phone;
     }
 }

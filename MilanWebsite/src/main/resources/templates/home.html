@@ -25,6 +25,23 @@
         </div>
         <hr>
         <!-- OTHER LINKS -->
+        <div th:if="${session.accountID == null}">
+          <div id="login">
+            <a th:href="@{/login}" style="padding-right: 20px;">
+              <button>Login</button>
+            </a>
+            <a th:href="@{/signup}">
+              <button>Sign Up</button>
+            </a>
+          </div>
+        </div>
+        <div th:unless="${session.accountID == null}" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <form th:action="@{/logout}" method="get">
+            <button type="submit">Logout</button>
+          </form>
+          <br>
+          <p th:text="'Welcome back, ' + ${session['username']} + '!'"></p>
+        </div>
       </div>
       <!-- MAIN PAGE-->
       <div>

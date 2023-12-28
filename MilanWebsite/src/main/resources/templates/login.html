@@ -4,12 +4,67 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script defer src="/javascript/weather.js"></script>
   </head>
   <body>
     <!-- WHOLE PAGE -->
-    <div>
-
+    <div id="body">
+      <!-- NAV SIDE BAR -->
+      <div id="nav">
+        <img src="/images/Logo.png">
+        <hr>
+        <!-- WEATHER DISPLAY -->
+        <div>
+          <p id="time"></p>
+          <hr>
+          <p id="city">Chicago</p>
+          <p id="currentTemp"></p>
+          <p id="weather"></p>
+        </div>
+        <hr>
+        <a href="/" style="display: flex; justify-content: center; align-items: center;">
+          <button>Back</button>
+        </a>
+      </div>
+      <!-- MAIN PAGE-->
+      <div id="body2">
+        <br>
+        <form action="/loginAttempt" method="post">
+        
+          <div style="display: flex; justify-content: center;">
+              <label style="font-weight: bolder; font-size: 20pt">Username:</label>
+              <input type="text" id="username" name="username"><br>
+          </div>
+          <br>
+          <div style="display: flex; justify-content: center;">
+              <label style="font-weight: bolder; font-size: 20pt">Password:</label>
+              <input type="password" id="password" name="password"><br>
+          </div>
+          <br>
+          <div style="display: flex; justify-content: center;">
+              <label style="font-weight: bolder; font-size: 20pt">Email:</label>
+              <input type="email" id="email" name="email"><br>
+          </div>
+          <br>
+          <div style="display: flex; justify-content: center;">
+              <label style="font-weight: bolder; font-size: 20pt">Phone:</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+          </div>
+  
+          <br>
+          <br>
+          <div style="display: flex; justify-content: center;">
+              <button type="submit" style="font-size: 20px; padding: 10px;">Log In</button>
+          </div>
+      </form>
+        <hr>
+        <p>Don't have an account? Create one!</p>
+        <a th:href="@{/signup}">
+          <button>Sign Up</button>
+        </a>
+      </div>
     </div>
   </body>
 </html>
